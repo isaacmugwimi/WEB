@@ -938,36 +938,92 @@ footer .footer1 .social-media {
 
 #contact #map{
   width: 50%;
-  background-color: blue;
   height: 400px;
 }
 
-/* #contact #message-form{ wi} */
-
-#contact #map img{
+#contact #map iframe{
   width: 100%;
+  height: 100%;
 }
 
-#contact .location form{
+#testimonials{
+  margin-top: 50px;
+  /* background-color: red; */
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.534);
+  margin: 50px 20px ;
+  padding: 40px 50px;
+  justify-content: space-between;
+}
+
+#testimonials #message-form{
   display: flex;
   flex-direction: column;
+  width: 55%;
 }
 
-#contact .location form input{
+#testimonials #message-form h6{
+  font-size: 14px;
+  color: #00000071;
+}
+
+#testimonials #message-form h3{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#testimonials #message-form form{
+  display: flex;
+  flex-direction: column;
+  /* background-color: green; */
+}
+
+#testimonials #message-form form input{
   padding: 8px;
   margin-bottom: 15px;
+  outline: none;
 }
 
-#contact .location form button{
+#testimonials #message-form form textarea{
+  outline: none;
+  padding: 10px;
+}
+
+#testimonials #message-form form button{
   background-color: #088178;
   color: white;
   width: 130px;
   border: 2px solid #088178;
+  margin-top: 20px;
+  align-self: center;
 }
-
-#contact .location form button:hover{
+#testimonials #message-form form button:hover{
   border: 2px solid #FF532E;
 }
+
+#testimonials #people-testimonials{
+  background-color: rgba(245, 222, 179, 0.24);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#testimonials #people-testimonials .person{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#testimonials #people-testimonials .person .person-image{
+  margin-right: 10px;
+}
+
+#testimonials #people-testimonials .person .person-details ul{
+  list-style: none;
+  font-size: 14px;
+}
+
 
 /*************************************** media queries **************************************************** */
 @media (max-width: 799px) {
@@ -1102,8 +1158,42 @@ footer .footer1 .social-media {
   }
   #about #video-section {
     width: 100%;
+  }
+
+  /* ************************  contact page  ********************* */
+  #contact {
+    padding: 40px 20px;
+  }
+  #contact .location {
+    width: 43%;
+    margin-right: 40px;
+  }
+  #testimonials {
+    margin: 50px 20px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  #testimonials #message-form {
+    width: 100%;
+    /* background-color: red; */
+  }
+
+  #testimonials #message-form form #name{
+    margin-top: 30px;
+  }
+
+  #testimonials #message-form form input {
+    margin-bottom: 25px;
+  }
+  #testimonials #people-testimonials {
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px 5px;
+  }
+    
 }
-}
+
 
 @media (max-width: 477px) {
   .section-p1 {
@@ -1300,4 +1390,50 @@ footer .footer1 .social-media {
     font-size: 30px;
   }
 
+  /* ************************  contact page  ********************* */
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact .location {
+    width: 100%;
+    /* margin-right: 40px; */
+    margin-bottom: 30px;
+  }
+  #contact .location .location-icon .image img {
+    width: 100%;
+    height: 100%;
+  }
+  #contact .location .location-icon p{
+    margin: 5px;
+  }
+  #contact #map{
+    width: 100%;
+  }
+  #testimonials {
+    margin: 50px 10px;
+    padding: 40px 15px;
+  }
+
+  
+  #testimonials #message-form h3 {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+  #testimonials #message-form form input {
+    margin-bottom: 25px;
+  }
+  #testimonials #message-form form #name {
+    margin-top: 20px;
+  } 
+
+  #testimonials #people-testimonials .person .person-image {
+    /* margin-right: 10px; */
+    width: 20%;
+  }
+
+  #testimonials #people-testimonials .person .person-image img{
+    width: 100%;
+  }
 }
