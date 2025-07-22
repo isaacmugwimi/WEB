@@ -5,10 +5,9 @@
   font-family: "Spartan", sans-serif;
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   display: none;
-}
-
+} */
 h1 {
   font-size: 50px;
   line-height: 64px;
@@ -234,7 +233,6 @@ button.normal {
 
 #product1 {
   text-align: center;
-  /* background-color: red; */
 }
 
 #product1 p {
@@ -248,7 +246,6 @@ button.normal {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* flex-direction: row; */
   padding-top: 20px;
 }
 
@@ -1024,9 +1021,155 @@ footer .footer1 .social-media {
   font-size: 14px;
 }
 
+/************************************* Cart ************************************************** */
+#shopping-cart .cart-table{
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+#shopping-cart table{
+  width: 100%;
+  margin: 50px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+  /* border: 1px solid darkcyan; */
+  
+}
+
+#shopping-cart .cart-table table thead{
+  background-color: rgba(0, 139, 139, 0.342);
+  color: darkblue;
+
+}
+
+#shopping-cart .cart-table table thead td{
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+#shopping-cart .cart-table table tbody .cart-product-img{
+  width: 40px;
+}
+#shopping-cart .cart-table table tbody .delete{
+  width: 20px;
+}
+#shopping-cart .cart-table table td{
+  border: 1px solid darkcyan;
+  padding: 5px 0;
+}
+
+#shopping-cart .cart-table table td:nth-child(1){
+  width: 100px;
+  text-align: center;
+}
+
+#shopping-cart .cart-table table td:nth-child(2){
+  width: 130px;
+  text-align: center;
+}
+#shopping-cart .cart-table table td:nth-child(3){
+  width: 200px;
+  text-align: center;
+  font-size: 14px;
+}
+#shopping-cart .cart-table table td:nth-child(4){
+  width: 150px;
+  text-align: center;
+  
+}
+#shopping-cart .cart-table table td:nth-child(5){
+  width: 150px;
+  text-align: center;
+}
+
+#shopping-cart .cart-table table td:nth-child(6){
+  width: 100px;
+  text-align: center;
+}
+#shopping-cart .cart-table table tbody td:nth-child(5) input{
+  width: 80px;
+  height: 25px;
+  padding: 5px;
+  outline: none;
+  border: 1px solid darkcyan;
+
+}
+
+#coupon-part{
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#coupon-part .coupon h4{
+  margin-bottom: 20px;
+}
+
+#coupon-part .coupon .coupon-input input{
+  padding: 8px 15px;
+  width: 280px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 1px solid darkcyan;
+}
+#coupon-part .coupon .coupon-input button{
+  padding: 8px 25px;
+  font-size: 15px;
+  background-color: darkcyan;
+  color: white;
+  border: 1px solid darkcyan;
+  cursor: pointer;
+  border-radius: 20px;
+
+}
+#coupon-part .coupon .coupon-input button:hover{
+  border: 1px solid #FF532E;
+  background-color: rgba(0, 139, 139, 0.582);
+  color: #041E43;
+}
+
+#coupon-part .cart-tools{
+  padding: 30px;
+  border: 1px solid burlywood;
+  width: 40%;
+}
+#coupon-part .cart-tools h4{
+  margin-bottom: 10px;
+}
+
+#coupon-part .cart-tools table{
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+
+#coupon-part .cart-tools table td{
+  border: 1px solid darkcyan;
+  padding: 10px 30px;
+  
+}
+#coupon-part .cart-tools button{
+  padding: 10px 16px;
+  background-color: darkcyan;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid darkcyan;
+  cursor: pointer;
+  color: white;
+  margin-top: 15px;
+}
+
+#coupon-part .cart-tools button:hover{
+  border: 2px solid #FF532E;
+}
 
 /*************************************** media queries **************************************************** */
-@media (max-width: 799px) {
+@media (max-width: 850px) {
   #navbar {
     display: flex;
     flex-direction: column;
@@ -1191,7 +1334,39 @@ footer .footer1 .social-media {
     margin-top: 40px;
     padding: 20px 5px;
   }
-    
+  /*************************************** contact **************************************************** */
+  #shopping-cart .cart-table table tbody img {
+    width: 80px;
+    padding: 8px;
+  }
+  
+  #shopping-cart .cart-table table tbody td:nth-child(5) input {
+    height: 30px;
+    padding: 10px;
+
+  }
+  #shopping-cart .cart-table table tbody .delete {
+    width: 40px;
+  }
+  #coupon-part {
+    /* background-color: red; */
+    padding: 40px 30px;
+  }
+  #coupon-part .coupon .coupon-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  #coupon-part .coupon .coupon-input button {
+    margin-top: 20px;
+    width: 200px;
+  }
+  #coupon-part .cart-tools {
+    padding: 30px;
+    border: 1px solid burlywood;
+    width: 55%;
+}
+
 }
 
 
@@ -1372,7 +1547,7 @@ footer .footer1 .social-media {
     margin: 10px 0;
   }
 
-   /* ************************  blog page  ********************* */
+   /* ************************  About page  ********************* */
   #about {
     padding: 0px;
     margin-top: 40px;
@@ -1436,4 +1611,40 @@ footer .footer1 .social-media {
   #testimonials #people-testimonials .person .person-image img{
     width: 100%;
   }
+
+    /* ************************  cart page  ********************* */
+  #coupon-part {
+    /* background-color: red; */
+    padding: 40px 15px;
+    display: block;
+  }
+  #coupon-part .coupon{
+    display: flex;
+    flex-direction: column;
+  }
+  #coupon-part .coupon .coupon-input {
+    /* display: flex;
+    justify-content: space-between; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #coupon-part .coupon .coupon-input input {
+    padding: 8px 15px;
+    width: 230px;
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+    
+  }
+  #coupon-part .coupon .coupon-input button {
+    margin-top: 0px;
+    width: 100px;
+    margin: 0;
+    border-radius: 0 20px 20px 0;
+  }
+  #coupon-part .cart-tools {
+    margin-top: 20px;
+    width: 100%;
+}
 }
