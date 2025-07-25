@@ -200,3 +200,5 @@ function saveTolocalStorage(productImage, productPrice, productTitle) {
 
   alert(`${productTitle} added to cart`);
 }
+
+//almost complete
